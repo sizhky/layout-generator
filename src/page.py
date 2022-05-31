@@ -183,5 +183,6 @@ if __name__ == "__main__":
         H(0.15, [V(6, id="r31"), V(4, id="r32")]),
         H(0.15, [V(6, id="r41"), V(4, id="r42")]),
     )
-    page.generate(1000, 800, noisy=False, shuffle_children=False)
+    page.generate(1000, 800, noisy=True, shuffle_children=False)
     page.show(texts="id")
+    config1()
