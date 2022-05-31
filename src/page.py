@@ -176,12 +176,12 @@ class Tree:
 if __name__ == "__main__":
     page = construct_page(
         H(0.05, id="tax-invoice"),
-        H(0.15, [V(0.4), V(-1)]),
-        H(0.15, [V(0.4), V(-1)]),
+        H(0.15, [V(4, id="r11"), V(6, id="r12")]),
+        H(0.15, [V(4, id="r21"), V(6, id="r22")]),
         H(0.05),
         H(0.3),
-        H(0.15, [V(0.6), V(-1)]),
-        H(0.15, [V(0.6), V(-1)]),
+        H(0.15, [V(6, id="r31"), V(4, id="r32")]),
+        H(0.15, [V(6, id="r41"), V(4, id="r42")]),
     )
-    page.generate(1000, 800)
+    page.generate(1000, 800, noisy=False, shuffle_children=False)
     page.show(texts="id")
