@@ -1,9 +1,8 @@
-from ..src.page import *
-
-url = "https://www.geneevarojr.com/wp-content/uploads/2020/10/Sample-Retail-Invoice-Template.jpg?fit=1300%2C1838&ssl=1"
+from src.page import *
 
 
 def config1():
+    url = "https://www.geneevarojr.com/wp-content/uploads/2020/10/Sample-Retail-Invoice-Template.jpg?fit=1300%2C1838&ssl=1"
     page = construct_page(
         H(1, [V(6, id="title"), V(4, id="logo")]),
         H(2, id="address-1"),
@@ -13,3 +12,6 @@ def config1():
         H(5, id="paragraph"),
     )
     return page
+
+
+
