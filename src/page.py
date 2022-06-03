@@ -3,7 +3,7 @@ __all__ = ["Tree", "H", "V", "construct_page"]
 from torch_snippets import *
 from copy import deepcopy
 
-from invoiceConfigs import *
+# from invoiceConfigs import *
 
 
 def construct_page(*regions, **kwargs):
@@ -175,12 +175,18 @@ class Tree:
 
 if __name__ == "__main__":
 	page = construct_page(
-	H(3),
-	H(1.5,id="Total"),
-	H(1,id="Subtotal"),
-	H(3,id="AmountBreakup"),
-	H(0.5,id="PaymentType"),
-	
+	H(1,[
+		V(6,id="Logo"),
+		V(4,id="SellerInfo"),
+	]),
+	H(2.5,[
+		V(1,id="BuyerInfo"),
+		V(1,id="InvoiceInfo"),
+	]),
+	H(1,id="SellerPOC"),
+	H(2,id="Table"),
+	H(1,id="AmountBreakup"),
+	H(0.5,id="Footer"),
 	)
 
 
