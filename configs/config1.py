@@ -12,6 +12,3 @@ def config1():
         H(5, id="paragraph"),
     )
     return page
-
-
-
